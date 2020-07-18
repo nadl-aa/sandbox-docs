@@ -1,0 +1,259 @@
+<p class="upper">New Consent</p>
+<p class="top">
+  Choose Assets
+</p>
+<p class="below">
+  Choose which asset you want to share from the below list
+</p>
+<div class="step1">
+<mat-vertical-stepper >
+  <mat-step label="select financial info">
+<mat-card >
+  <img src="/assets/ico_passport.svg"  width="40">
+  <span class="bank">SBI</span>
+</mat-card>
+<mat-card >
+    <form [formGroup]='setForm' (ngSubmit)='onSubmit()'>
+      <div class='form-group'>
+        <hr>
+        <div class='checkbox' *ngFor="let acct of accounts.discoveredaccount">
+          <p>{{acct.accsubtype}}</p>
+          {{ acct.maskedaccnumber }}  <input type='checkbox' class="cb" formControlName='roles' (change)="onChange(acct.accid,$event.target.checked)" [value]='acct.accid'>
+            <hr>
+        </div>
+      </div>
+      <div class='form-group'>
+        <input type='submit' value='Submit' class='btn'>
+      </div>
+    </form>
+</mat-card>
+</mat-step>
+  <mat-step label="select time period">
+    <p></p>
+    <form [formGroup]="timePeriodForm">
+      <mat-form-field>
+        <mat-select placeholder="Type" formControlName="types">
+          <mat-option *ngFor="let type of types" [value]="type.displayName">
+            {{ type.displayName}}
+            </mat-option>
+            </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-select placeholder="scenario" formControlName="scenario">
+                <mat-option *ngFor="let scenario of scenarios" [value]="scenario.displayName">
+                  {{ scenario.displayName}}
+                  </mat-option>
+                  </mat-select>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-select placeholder="purpose" formControlName="reason">
+                      <mat-option *ngFor="let purpose of purposes" [value]="purpose.id">
+                        {{ purpose.displayName}}
+                        </mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                        <mat-form-field>
+                          <input
+                            matInput
+
+                            [matDatepicker]="startpicker"
+                            type="text"
+                            placeholder="FI data start date"
+                            formControlName="FIStartDate"
+
+                            #startDate
+                    />
+                          <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+                          <mat-datepicker #startpicker></mat-datepicker>
+                          </mat-form-field>
+                          <mat-form-field>
+                            <input
+                              matInput
+
+                              [matDatepicker]="picker"
+                              type="text"
+                              placeholder="FI data end date"
+                              formControlName="FIEndDate"
+                              #endDate
+                              maxlength="10"
+
+                            />
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                            <mat-form-field>
+                              <mat-select placeholder="Frequency" formControlName="Frequency">
+                                <mat-option *ngFor="let item of frequency" [value]="item.displayName">
+                                  {{ item.displayName }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                            <mat-form-field>
+                              <input
+                                matInput
+                                placeholder="Frequency value"
+                                formControlName="reasonValue"
+                                #reasonValue
+                                maxlength="3"
+                                digit-only-input
+                              />
+                              </mat-form-field>
+                              <mat-form-field>
+                                <mat-select placeholder="Consent Mode" formControlName="consentmode">
+                                  <mat-option *ngFor="let item of consentmode" [value]="item.displayName">
+                                    {{ item.displayName }}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <mat-select placeholder="Data Life" formControlName="dataLife">
+                                  <mat-option *ngFor="let item of datalife" [value]="item.displayName">
+                                    {{ item.displayName }}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="DataLife value" formControlName="dataLifeValue" />
+
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input
+                                  matInput
+                                  [matDatepicker]="startpicker1"
+                                  type="text"
+                                  placeholder="consent start date"
+                                  formControlName="StartDate"
+
+                                  #startDate
+                          />
+                                <mat-datepicker-toggle matSuffix [for]="startpicker1"></mat-datepicker-toggle>
+                                <mat-datepicker #startpicker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field>
+                                  <input
+                                    matInput
+
+                                    [matDatepicker]="picker1"
+                                    type="text"
+                                    placeholder="consent end date"
+                                    formControlName="EndDate"
+                                    #endDate
+                                    maxlength="10"
+
+                                  />
+                                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+
+                                  <div class='checkbox' *ngFor="let data of datatype">
+                                  <input type="checkbox" class="cb" formControlName='roles' (change)="change(data.displayName,$event.target.checked)" [value]='data.displayName'>{{data.displayName}}
+                                  </div>
+                                  <button
+                                  mat-button
+                                  type="submit"
+                                  class="btn"
+                                  matStepperPrevious
+                                  (click)="goToPreviousStep()"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                mat-button
+                                type="submit"
+                                class="submit"
+                                matStepperNext
+                                (click)="timeperiod(timePeriodForm.value)"
+                              >
+                                NEXT
+                              </button>
+                                </form>
+
+                                  </mat-step>
+
+                                  <mat-step label="Data Filter">
+                                  <div class="filter">
+
+                                                                          <mat-form-field>
+                                        <mat-select placeholder="Type" (selectionChange)="onFilterTypeChange($event.value)">
+                                          <mat-option *ngFor="let item of dataFilterType" [value]="item.displayName">
+                                            {{ item.displayName }}
+                                          </mat-option>
+                                        </mat-select>
+
+                                      </mat-form-field>
+
+
+
+                                    <div *ngIf="selectedFilterType !== 'TRANSACTIONTYPE'">
+                                      <mat-form-field>
+                                        <mat-select placeholder="Operator" (selectionChange)="onChangeOperatorList($event.value)">
+                                          <mat-option *ngFor="let item of operatorList" [value]="item.displayName">
+                                            {{ item.displayName }}
+                                          </mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                    </div>
+                                    <div *ngIf="selectedFilterType === 'TRANSACTIONTYPE'">
+                                      <mat-form-field>
+                                        <input matInput placeholder="Operator" [(ngModel)]="operartor" readonly digit-only-input />
+                                        <!-- <mat-error *ngIf="!dataLifeValue.invalid">{{
+                                          getValidationErrorMessage(timePeriodForm.controls.dataLifeValue)
+                                        }}</mat-error> -->
+                                      </mat-form-field>
+                                    </div>
+                                    <div *ngIf="selectedFilterType === 'TRANSACTIONTYPE'">
+                                      <mat-form-field>
+                                        <mat-select placeholder="Value" (selectionChange)="onTransactionValueChange($event.value)">
+                                          <mat-option *ngFor="let item of transcationList" [value]="item.displayName">
+                                            {{ item.displayName }}
+                                          </mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                    </div>
+                                    <div *ngIf="selectedFilterType !== 'TRANSACTIONTYPE'">
+                                      <mat-form-field>
+                                        <input matInput placeholder="Value" maxlength="12" [(ngModel)]="transactionvalue"  />
+                                        <!-- <mat-error *ngIf="!dataLifeValue.invalid">{{
+                                          getValidationErrorMessage(timePeriodForm.controls.dataLifeValue)
+                                        }}</mat-error> -->
+                                      </mat-form-field>
+                                      <mat-form-field>
+                                        <input matInput placeholder="Recipient" />
+                                        <!-- <mat-error *ngIf="!dataLifeValue.invalid">{{
+                                          getValidationErrorMessage(timePeriodForm.controls.dataLifeValue)
+                                        }}</mat-error> -->
+                                      </mat-form-field>
+                                      <mat-form-field>
+                                        <input matInput placeholder="URL" />
+                                        <!-- <mat-error *ngIf="!dataLifeValue.invalid">{{
+                                          getValidationErrorMessage(timePeriodForm.controls.dataLifeValue)
+                                        }}</mat-error> -->
+                                      </mat-form-field>
+                                      <button
+                                      mat-button
+                                      type="submit"
+                                      class="btn"
+                                      matStepperPrevious
+                                      (click)="goToPreviousStep()"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                    mat-button
+                                    type="submit"
+                                    class="submit"
+                                    matStepperNext
+                                    (click)="completedConsentFlow()"
+                                  >
+                                    NEXT
+                                  </button>
+                                    </div>
+
+
+
+
+
+</div>
+</mat-step>
+    </mat-vertical-stepper>
+</div>

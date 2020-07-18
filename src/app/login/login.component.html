@@ -1,0 +1,60 @@
+<mat-card class=" card">
+<mat-card-title class="title h4 text-1">Sign in</mat-card-title>
+<form
+[formGroup]="loginForm"
+(ngSubmit)="login(loginForm.value)"
+autocomplete="off"
+>
+<div class="input-block">
+  <mat-form-field class="mandatory">
+    <input
+      matInput
+      placeholder="vua"
+      formControlName="vua"
+      class="body-text-16 "
+      #vua
+      autocomplete="off"
+      required
+      maxlength="20"
+    />
+    </mat-form-field>
+    <div class="nadl-text text-4 body-text-16"><span>@nadl</span></div>
+</div>
+
+    <div class="input-block">
+      <mat-form-field>
+        <input
+          matInput
+
+          placeholder="password"
+          formControlName="password"
+          [type]="hide ? 'password' : 'text'" formControlName="password" required />
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+</mat-form-field>
+</div>
+<div fxLayout="row" class="registration-button">
+  <div fxFlex="auto" class="signIn">
+    <a
+    routerLink="/home"
+
+
+  >Sign
+  Up
+    </a>
+
+  </div>
+  <div fxFlex="auto" fxLayoutAlign="end">
+    <button
+      mat-flat-button
+      type="submit"
+      class="primary-button button button-text-16" color="primary"
+
+    >
+       Sign-in
+    </button>
+    </div>
+    </div>
+
+</form>
+</mat-card>

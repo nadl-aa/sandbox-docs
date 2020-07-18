@@ -1,0 +1,65 @@
+<p class="head">
+  Welcome to SBI
+</p>
+<div class="img">
+<img src="/assets/sbilogo.png" alt="no image" width="200">
+</div>
+<button mat-flat-button color="primary" (click)="discovery()" class="btn">Account Discovery</button>
+<button mat-flat-button color="primary" (click)="discover()" class="btn">Link Accounts</button>
+<!--
+<div *ngFor="let acc of accounts; let i= index" >-->
+  <div *ngIf="accounts">
+   <div class="fip">FIPID: {{accounts.fipid}}</div>
+    <br>
+   <div class="sub">Discovered Accounts:</div>
+      <table class="table" align="center">
+        <thead>
+          <tr>
+            <th>
+              Account ID
+            </th>
+            <th>
+              Reference Number
+            </th>
+            <th>
+              Masked Account Number
+            </th>
+            <th>
+              Type Id
+            </th>
+            <th>
+              Account Sub-type Id
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let acct of accounts.discoveredaccount" >
+            <td> {{acct.accid}}</td>
+           <td>{{acct.refnumber}}</td>
+            <td>{{acct.maskedaccnumber}}</td>
+            <td>{{acct.typeid}}</td>
+            <td>{{acct.accsubtype}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div *ngIf="account">
+
+  <form [formGroup]='setRoleForm' (ngSubmit)='onSubmit()' novalidate>
+    <div class='form-group'>
+      <label for='roles'>Roles:</label>
+      <div class='checkbox' *ngFor="let role of userRoles">
+        <label>
+          <input type='checkbox' formControlName='roles' [checked]='isSelected(role.name)' [value]='role.id'> {{ role.name }}
+        </label>
+      </div>
+    </div>
+    <div class='form-group'>
+      <input type='submit' value='Go' class='btn btn-default'>
+    </div>
+  </form>
+  
+
+
+</div>
+

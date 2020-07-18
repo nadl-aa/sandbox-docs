@@ -1,0 +1,84 @@
+th,td
+{
+  padding-left: 50px;
+  padding-top: 30px;
+  margin-left: -90px;
+}
+.head
+{
+  padding-top: 5px;
+  margin-left: 530px;
+}
+.details{
+
+  font-weight: bolder;
+}
+.detail
+{
+  padding-top: 5px;
+  margin-left: 530px;
+}
+.d-data
+{
+  padding-top: 5px;
+  margin-left: 50px;
+}
+.d-datas
+{
+  padding-top: 5px;
+  margin-left: 95px;
+}
+.d-datass{
+padding-top: 5px;
+  margin-left: 79px;
+}
+.d-datasp{
+padding-top: 5px;
+  margin-left: 88px;
+}
+.f-data
+{
+  padding-top: 350px;
+  margin-left: 530px;
+}
+.m-data
+{
+  padding-top: 0px;
+  margin-left: 530px;
+}
+.cd
+{
+  text-align: center;
+  font-weight: bolder;
+}
+.sc
+{
+  margin-left: 530px;
+  width: 300px;
+}
+.mc
+{
+  margin-left: 530px;
+  width: 470px;
+  margin-top: 30px;
+}
+.rc
+{
+  margin-left: 530px;
+  width: 300px;
+  margin-top: 20px;
+}
+.reason
+{
+  color: green;
+}
+.btn1
+{
+  margin-left: 530px;
+  margin-top: 25px;
+  padding-left: 30px;
+}
+.btn2
+{
+  margin-left: 300px;
+}

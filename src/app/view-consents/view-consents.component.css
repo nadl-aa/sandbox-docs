@@ -1,0 +1,161 @@
+.title
+{
+  text-align: center;
+  font-weight: bolder;
+}
+.acc
+{
+  text-align: center;
+  font-weight: bolder;
+}
+.container {
+  max-width: 1100px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  .selected-option {
+    padding-bottom: 10px;
+    border-bottom: 4px solid;
+  }
+  .boder-card {
+    opacity: 0.1;
+    border-bottom: 1px solid;
+  }
+
+  .header-card {
+    align-items: center !important;
+    padding: 20px 30px;
+    .text-column {
+      padding-left: 60px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .link-assets {
+    text-transform: uppercase;
+    img {
+      padding-right: 10px;
+    }
+  }
+  .card-container {
+    .card-row {
+      place-content: stretch start !important;
+      flex-wrap: wrap !important;
+
+      .card-content {
+        margin-bottom: 20px;
+        text-align: center;
+
+        .asset-count {
+          font-weight: normal;
+          padding-bottom: 20px;
+        }
+        .bank-name {
+          padding: 10px;
+        }
+        .cancel-button {
+          border: 2px solid;
+          padding: 0px 30px !important;
+        }
+      }
+    }
+    .asset-type {
+      padding: 30px 0 5px;
+      text-transform: uppercase;
+    }
+    .border-line {
+      display: flex;
+      padding-top: 40px;
+      align-items: center;
+      .boder-bottom {
+        opacity: 0.1;
+        border-bottom: 2px solid;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+.illustration-card {
+  text-align: center;
+  padding: 40px 0px 140px;
+  .info-text {
+    padding: 70px 20px;
+    font-weight: 600;
+  }
+}
+
+.content-data {
+  padding: 20px 60px;
+}
+
+.content-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 116px;
+  width: 23%;
+  border-radius: 15px;
+
+  .number-style {
+    font-size: 72px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .text-style {
+    padding-right: 30px;
+    position: relative;
+    bottom: -15px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+a:hover {
+  cursor:pointer;
+ }
+
+.active{
+  width: 500px;
+  margin-top: 10px;
+}
+.pending{
+  width: 500px;
+  margin-top: 1px;
+}
+.parent {height: 100px;}
+    .active   {
+      background-color: cyan;
+      margin-left: 10px;
+    }
+    .pending  {
+      background-color: yellow;
+      margin-left: 10px;
+      margin-top: 10px;
+
+    }
+    .inactive  {
+      background-color: yellow;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 6px;
+    }
+    .p
+    {
+      padding-top: 10px;
+      text-align: center;
+    }
+.data{
+  margin-left: 120px;
+  margin-top: 20px;
+  width: 500px;
+  border: darkmagenta;
+  border-width: 2px;
+
+}
+.date
+{
+  padding-left: 290px;
+}

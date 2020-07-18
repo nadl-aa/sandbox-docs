@@ -1,0 +1,45 @@
+.img{
+padding-left: 220px;
+padding-top: 100px;
+
+}
+.imgi{
+  padding-left: 220px;
+  margin-top: 100px;
+}
+.imga{
+  padding-left: 220px;
+  margin-top: 100px;
+}
+.head
+{
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  color: royalblue;
+}
+.sub{
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  color: blueviolet;
+}
+.btn19
+{
+  margin-top: 90px;
+
+}
+.imgc
+{
+  padding-left:290px;
+  margin-top:1px ;
+}
+.sbi
+{
+  margin-left: 10px;
+}
+.search{
+  width:20%;
+  margin-left: 200px;
+  margin-top: 30px;
+}

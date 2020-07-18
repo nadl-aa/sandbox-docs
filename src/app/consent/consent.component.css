@@ -1,0 +1,49 @@
+.card{
+  margin-left: 470px;
+  width: 700px;
+  margin-top: 40px;
+}
+.bank{
+  padding-left: 60px;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bolder;
+}
+.step1{
+  margin-left: 470px;
+}
+.filter
+{
+  width: 450px;
+  padding-left: 250px;
+}
+.btn
+{
+  color: cyan;
+}
+.submit
+{
+  color: blue;
+  margin-left: 240px;
+}
+.top
+{
+  font-weight: bolder;
+  font-size: larger;
+  margin-top: 10px;
+  margin-left: 510px;
+}
+.below
+{
+  font-weight: normal;
+  margin-top: 10px;
+  margin-left: 510px;
+}
+.upper
+{
+  text-align: center;
+  text-decoration: blue;
+  color:darkgray;
+  font-weight: bolder;
+  font-size: x-large;
+}

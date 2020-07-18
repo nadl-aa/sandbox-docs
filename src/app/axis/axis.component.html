@@ -1,0 +1,44 @@
+<p class="head">
+  Welcome to Axis Bank
+</p>
+<div class="img">
+<img src="/assets/axis.png" alt="no image" width="200">
+</div>
+<button mat-flat-button color="primary" (click)="discovery()" class="btn">Account Discovery</button>
+<!--
+<div *ngFor="let acc of accounts; let i= index" >-->
+  <div *ngIf="accounts">
+   <div class="fip">FIPID: {{accounts.fipid}}</div>
+    <br>
+   <div class="sub">Discovered Accounts:</div>
+      <table class="table" align="center">
+        <thead>
+          <tr>
+            <th>
+              Account ID
+            </th>
+            <th>
+              Reference Number
+            </th>
+            <th>
+              Masked Account Number
+            </th>
+            <th>
+              Type Id
+            </th>
+            <th>
+              Account Sub-type Id
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let acct of accounts.discoveredaccount" >
+            <td> {{acct.accid}}</td>
+           <td>{{acct.refnumber}}</td>
+            <td>{{acct.maskedaccnumber}}</td>
+            <td>{{acct.typeid}}</td>
+            <td>{{acct.accsubtype}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

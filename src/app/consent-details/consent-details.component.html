@@ -1,0 +1,77 @@
+<mat-card class="consent">
+  <p class="cd">Consent Details</p>
+</mat-card>
+<div *ngIf="consents">
+  <p class="head">
+    Consent Request for
+  </p>
+  <mat-card class="sc">
+SELF
+<p>Requested on : {{consents.consentdetail.consentStart}}</p>
+
+  </mat-card>
+  <table class="table" align="center">
+    <thead>
+      <tr>
+        <th>
+          Frequency
+        </th>
+        <th>
+          Start date
+        </th>
+        <th>
+          End date
+        </th>
+</tr>
+</thead>
+    <tbody>
+      <tr>
+        <td>{{consents.consentdetail.fetchType}}</td>
+
+
+        <td>{{consents.consentdetail.consentStart}}</td>
+
+          <td>{{consents.consentdetail.consentExpiry}}</td>
+
+</tr>
+</tbody>
+
+</table>
+<mat-card class="rc">
+  <p class="reason">Reason</p>
+  <p>{{consents.consentdetail.purpose.text}}</p>
+</mat-card>
+<mat-card class="mc">
+<p class="detai">Consent Details</p>
+<table>
+  <tr>
+<span class="dtail">Consent Mode</span>
+<span class="d-data">{{consents.consentdetail.consentMode}}</span><br></tr>
+<tr>
+<span class="dtail">Consent Types</span>
+<span *ngFor="let type of consents.consentdetail.consentTypes" class="d-data">{{type}}</span></tr>
+<tr>
+<span class="dtail">FI Types</span>
+<span *ngFor="let type of consents.consentdetail.fiTypes" class="d-datas">{{type}}</span><br></tr>
+<tr>
+<span class="dtail">Data Filter</span>
+<span *ngFor="let types of consents.consentdetail.dataFilter" class="d-datass">{{types.type}}
+  {{types.operator}}
+  {{types.value}}</span></tr>
+  <tr>
+  <span class="dtail">Data Life</span>
+<span class="d-datasp">{{consents.consentdetail.dataLife.value}} {{consents.consentdetail.dataLife.unit}}</span></tr>
+</table>
+
+  </mat-card>
+  <mat-card class="mc">
+  <table>
+    <tr>
+<span *ngFor="let account of consents.consentdetail.accounts" class="d-datass">{{account.typeId}}<p class="d-datass">{{account.accountMaskedNumber}}</p>
+  </span>
+  </tr>
+</table>
+</mat-card>
+  <button mat-button color="primary" class="btn1">PAUSE</button>
+  <button mat-button color="primary" class="btn2">REVOKE</button>
+</div>

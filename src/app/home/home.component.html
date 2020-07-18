@@ -1,0 +1,91 @@
+<!--<div>
+<img src="assets/logo.svg" class="img" alt="NADL Logo" />
+ <p class="head">Welcome.</p>
+ <p class="sub">Enter the details and start the journey with us</p>
+ </div>-->
+<mat-card class="on-surface card">
+  <mat-card-title class="title h4 text-1">Create your Account</mat-card-title>
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="registerUser(myForm.value)"
+  >
+    <mat-form-field >
+      <input
+        matInput
+        char-only-input
+        placeholder="Full Name"
+        formControlName="name"
+        class="body-text-16"
+        class="body-text-16"
+        #firstname
+        autocomplete="off"
+        required
+        maxlength="30"
+        minlength="1"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+
+        [matDatepicker]="picker"
+        placeholder="dob"
+        formControlName="dateOfbirth"
+        class="body-text-16 input-date"
+        maxlength="10"
+        #dateOfbirth
+        required
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        digit-only-input
+        type="tel"
+        placeholder="mobile"
+        maxlength="10"
+        formControlName="mobile"
+        class="body-text-16"
+        #mobile
+        autocomplete="off"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        placeholder="email"
+        formControlName="email"
+        class="body-text-16"
+        #email
+        autocomplete="off"
+        required
+      />
+
+
+    </mat-form-field>
+    <div fxLayout="row" class="registration-button">
+      <div fxFlex="50" class="signIn">
+        <a href="" title="Sign in instead" class=" text-2 body-text-18" routerLink="/login">
+          Sign-in
+      </a>
+      </div>
+      <div fxFlex="50" fxLayoutAlign="end">
+        <button
+          mat-flat-button
+          type="submit"
+          class="primary-button button button-text-16"
+          color="primary"
+        >
+          next
+        </button>
+      </div>
+    </div>
+    </form>
+</mat-card>

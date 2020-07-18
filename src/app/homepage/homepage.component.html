@@ -1,0 +1,34 @@
+<table class="table" align="center">
+  <thead>
+    <tr>
+      <th>
+        Account ID
+      </th>
+      <th>
+        Reference Number
+      </th>
+      <th>
+        Masked Account Number
+      </th>
+      <th>
+        Type Id
+      </th>
+      <th>
+        Account Sub-type Id
+      </th>
+      <th>
+        Linking Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let acct of accmodel" >
+      <td> {{acct.accid}}</td>
+     <td>{{acct.refnumber}}</td>
+      <td>{{acct.maskedaccnumber}}</td>
+      <td>{{acct.typeid}}</td>
+      <td>{{acct.accsubtype}}</td>
+      <td>{{acct.linkstatus}}</td>
+    </tr>
+  </tbody>
+</table>

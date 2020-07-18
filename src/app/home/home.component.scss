@@ -1,0 +1,149 @@
+.card {
+  width: 500px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 430px;
+  margin-top: 70px;
+  .title {
+    padding: 30px 0 0;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  form {
+    padding: 0 50px;
+  }
+
+  .registration-button {
+    padding: 20px 0;
+
+    .signIn {
+      align-self: center;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .input-block {
+    position: relative;
+
+    .img-block {
+      position: absolute;
+      bottom: 53px;
+      right: 20px;
+    }
+  }
+  .otp-text {
+    position: relative;
+    top: -17px;
+    font-weight: normal;
+  }
+}
+.radio-block {
+  // padding: 10px 30px 30px;
+  padding: 10px 30px 30px 70px;
+  display: flex;
+  place-content: center;
+  justify-content: center;
+  @media screen and (max-width: 530px) {
+    padding: 30px 10px;
+  }
+  .radio-group {
+    // padding-right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width: 460px) {
+      padding-right: 0px;
+    }
+    &:first-child {
+      padding-right: 40px;
+    }
+    .label-radio {
+      text-align: center;
+    }
+  }
+  input[type='radio'] + label {
+    padding-top: 0px;
+    background: transparent;
+    padding-left: 0;
+  }
+}
+
+.margin-data {
+  margin-right: 30px;
+}
+.input{
+  width: 300px;
+}
+.authetication {
+  //background-image: url('/assets/group_99.svg'), url('/assets/authentication_background.svg');
+  background-position: 30% 20%, bottom;
+  background-repeat: no-repeat, repeat;
+  min-height: calc(100vh - 84px);
+
+  .header-border {
+    border-bottom:  2px solid #4731c2;
+    opacity: 0.5;
+  }
+  .container {
+    max-width: 1210px;
+    padding: 0 80px;
+    margin: 0 auto;
+    min-height: calc(100vh - 30px - 86px);
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 100px) {
+      padding: 50;
+    }
+    .header {
+      text-align:left;
+      max-width: 700px;
+      margin: 0 auto;
+
+      h3 {
+        padding: 50px 0px 20px;
+        line-height: 0cm;
+      }
+
+      p {
+        line-height: 3;
+        padding-top: 0px;
+      }
+    }
+  }
+  .card-data {
+    margin: 40px 0;
+  }
+}
+
+.row-height {
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .header-div {
+    max-height: 50% !important;
+    margin-bottom: 70px;
+  }
+  .authetication {
+    height: 100cm;
+  }
+  .row-height {
+    padding: 50px;
+  }
+}
+
+.display-card-center {
+  margin: 0 auto;
+}
+.head{
+  margin-top: 40px;
+  margin-left: 90px;
+  font-weight: bolder;
+}
+.img{
+  margin-top: 200px;
+  margin-left: 150px;
+}

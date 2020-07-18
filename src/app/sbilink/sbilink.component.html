@@ -1,0 +1,25 @@
+
+<div *ngIf="accounts">
+<form [formGroup]='setForm' (ngSubmit)='onSubmit()'>
+  <div class='form-group'>
+    <p class="sub">Link Assets</p>
+    <hr>
+    <div class='checkbox' *ngFor="let acct of accounts.discoveredaccount">
+      <p>{{acct.accsubtype}}</p>
+      {{ acct.maskedaccnumber }}  <input type='checkbox' class="cb" formControlName='roles' (change)="onChange(acct.accid,$event.target.checked)" [value]='acct.accid'>
+        <hr>
+    </div>
+  </div>
+  <div class='form-group'>
+    <input type='submit' value='Link' class='btn'>
+  </div>
+</form>
+<div *ngIf="accountmodel">
+  <div class="subh">You have successfully Linked Assests</div>
+  <p class="assets">Below assets have been linked from SBI</p>
+  <hr>
+  <div *ngFor="let acct of accountmodel">
+  <p class="subtype">{{acct.accsubtype}}</p>
+  <p class="masked">{{acct.maskedaccnumber}}</p>
+  <hr>
+</div>

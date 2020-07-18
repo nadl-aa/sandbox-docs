@@ -1,0 +1,31 @@
+<mat-card>
+ <p class="title">Consent</p>
+</mat-card>
+<div class="parent" fxLayout="row" >
+   <div fxFlex class="active">
+    <a (click)='active()'>
+      <p class="p"> 1 Active</p>
+    </a>
+    </div>
+    <div fxFlex class="pending">
+      <a (click)='active()'>
+       <p class="p"> 0 Pending</p>
+      </a>
+      </div>
+      <div fxFlex class="inactive">
+        <a (click)='active()'>
+          <p class="p">  0 Inactive </p>
+        </a>
+        </div>
+
+ </div>
+ <mat-card class="data">
+ <div *ngIf="consents">
+   <p>Consent Id: {{consents.consentid}}</p>
+   {{consents.consentdetail.fetchType}}
+   <span class="date">{{consents.consentdetail.consentStart}}</span>
+   <div *ngFor="let fitype of consents.consentdetail.fiTypes">
+   Consent Created for {{fitype}} purpose
+   </div>
+   </div>
+</mat-card>

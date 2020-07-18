@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 53.1 (72631) - https://sketchapp.com -->
+    <title>A0AEBEE3-E7A0-4D5F-8422-B0C6162B3EAD@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M3,18 L9,18 L9,16 L3,16 L3,18 L3,18 Z M3,6 L3,8 L21,8 L21,6 L3,6 L3,6 Z M3,13 L15,13 L15,11 L3,11 L3,13 L3,13 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="50" height="50"></rect>
+    </defs>
+    <g id="1-Responsive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g id="1.1-RWD_Home_No-Assets" transform="translate(-21.000000, -61.000000)">
+            <g id="Profile" transform="translate(18.000000, 55.000000)">
+                <g id="down">
+                    <g id="ic_sort">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <g id="Colors/Black" mask="url(#mask-2)">
+                            <g transform="translate(-13.000000, -13.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Black" stroke="none" fill="#000000" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

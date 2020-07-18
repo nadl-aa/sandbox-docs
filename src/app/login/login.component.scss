@@ -1,0 +1,92 @@
+.card {
+  width: 480px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 30%;
+  margin-top: 70px;
+  .title {
+    padding: 50px 0 0px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  form {
+    padding: 0 50px;
+  }
+  .forgot-pwd {
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    outline: 2;
+  }
+
+  .registration-button {
+    padding: 20px 0;
+
+    .signIn {
+      align-self: center;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .input-block {
+    position: relative;
+    width: 300px;
+    .nadl-text {
+      position: absolute;
+      bottom: 25px;
+      right:-29px;
+
+      span {
+        padding-right: 40px;
+      }
+    }
+
+    .img-block {
+      position: absolute;
+      bottom: 53px;
+      right: 20px;
+    }
+  }
+}
+.radio-block {
+  padding: 10px 30px 30px;
+  display: flex;
+  place-content: center;
+  justify-content: center;
+  .radio-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &:first-child {
+      padding-right: 40px;
+    }
+  }
+  input[type='radio'] + label {
+    padding-top: 0px;
+    background: transparent;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .card {
+    width: 100%;
+  }
+  .button {
+    padding: 4px 19px !important;
+  }
+  .radio-block {
+    padding: 30px 10px;
+    .radio-group {
+      padding-right: 0px;
+    }
+  }
+}
+.primary-button
+{
+  margin-right: 123px;
+}
